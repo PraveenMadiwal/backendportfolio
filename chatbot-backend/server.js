@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// ✅ Fix CORS issue
+
 const corsOptions = {
     origin: 'http://localhost:5173', // Allow React frontend
     methods: 'GET,POST',
