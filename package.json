@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build-client": "cd portfolio && npm run build",
+    "deploy": "npm run build-client && cd chatbot-backend && node server.js",
+    "install": "npm run install-client && npm run install-server",
+    "install-client": "cd portfolio && npm install",
+    "install-server": "cd chatbot-backend && npm install",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-client": "cd portfolio && npm run dev",
+    "start-server": "cd chatbot-backend && npm start"
+  },
+  "dependencies": {}
+}
